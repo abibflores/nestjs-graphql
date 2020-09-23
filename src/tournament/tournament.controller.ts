@@ -7,4 +7,5 @@ export class TournamentController {
     findAuthorized(): string {
         return 'This action returns all tournaments';
     }
+
 }

@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { TournamentModule } from './tournament/tournament.module';
+import { GraphQLModule } from '@nestjs/graphql';
+
 
 
 @Module({
@@ -17,6 +19,11 @@ import { TournamentModule } from './tournament/tournament.module';
       database: 'nest',
       autoLoadEntities: true,
       synchronize: true,
+    }),
+    GraphQLModule.forRoot({
+      debug: false,
+      playground: true,
+      autoSchemaFile: true
     }),
     TournamentModule,
   ],
