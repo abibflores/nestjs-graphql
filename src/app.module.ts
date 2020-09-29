@@ -5,25 +5,16 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { TournamentModule } from './tournament/tournament.module';
+import { TournamentModule } from './modules/tournament/tournament.module';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ConfigModule } from './config/config.module';
 import { DatabaseModule } from './database/database.module';
+import { UserModule } from './modules/user/user.module';
 
 
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: "localhost",
-      port: 8889,
-      username: 'abibflores',
-      password: '123456',
-      database: 'nest',
-      autoLoadEntities: true,
-      synchronize: true,
-    }),
     GraphQLModule.forRoot({
       debug: false,
       playground: true,
@@ -32,6 +23,7 @@ import { DatabaseModule } from './database/database.module';
     TournamentModule,
     ConfigModule,
     DatabaseModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
