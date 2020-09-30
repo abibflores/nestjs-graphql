@@ -10,6 +10,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ConfigModule } from './config/config.module';
 import { DatabaseModule } from './database/database.module';
 import { UserModule } from './modules/user/user.module';
+import { RoleModule } from './modules/role/role.module';
 
 
 
@@ -24,6 +25,7 @@ import { UserModule } from './modules/user/user.module';
     ConfigModule,
     DatabaseModule,
     UserModule,
+    RoleModule,
   ],
   controllers: [AppController],
   providers: [AppService],
