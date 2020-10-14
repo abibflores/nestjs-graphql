@@ -1,7 +1,7 @@
 import { Field, ObjectType } from '@nestjs/graphql';
 
 @ObjectType()
-export class Tournament {
+export class TournamentModel {
   @Field({ description: "Tournament Id" })
   id: number;
 

@@ -2,7 +2,7 @@ import { Role } from './../role/role.entity';
 import { UserDetails } from './user.details.entity';
 import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn, ManyToMany, JoinTable } from "typeorm";
 
-@Entity()
+@Entity("users")
 export class User extends BaseEntity {
     @PrimaryGeneratedColumn("increment")
     id: number;

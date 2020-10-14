@@ -3,7 +3,6 @@ import { ConfigService } from './config/config.service';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { TournamentModule } from './modules/tournament/tournament.module';
 import { GraphQLModule } from '@nestjs/graphql';
