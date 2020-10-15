@@ -1,5 +1,5 @@
 import { User } from './../user/user.entity';
-import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinColumn } from "typeorm";
+import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinColumn, CreateDateColumn, UpdateDateColumn } from "typeorm";
 
 @Entity("roles")
 export class Role extends BaseEntity {
@@ -20,10 +20,10 @@ export class Role extends BaseEntity {
     @Column({type: "varchar", default: "ACTIVE", length: 8})
     status: string;
 
-    @Column({type: "time", name: "created_at"})
-    createdAt: string;
-
-    @Column({type: "time", name: "updated_at"})
-    updatedAt: string;
+    @CreateDateColumn({ type: 'timestamp', name: 'created_at' })
+    createdAt: Date;
+  
+    @UpdateDateColumn({ type: 'timestamp', name: 'updated_at' })
+    updatedAt: Date;
 
 }
