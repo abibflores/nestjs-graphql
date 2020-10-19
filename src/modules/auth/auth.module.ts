@@ -30,7 +30,7 @@ import { ConfigModule } from 'src/config/config.module';
     })
   ],
   controllers: [AuthController],
-  providers: [AuthService, ConfigService],
+  providers: [AuthService, ConfigService, JwtStrategy],
   exports: [JwtStrategy, PassportModule]
 })
 export class AuthModule {}

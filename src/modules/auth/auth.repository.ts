@@ -7,7 +7,7 @@ import { User } from "../user/user.entity";
 import { Role } from '../role/role.entity';
 import { genSalt, hash } from 'bcryptjs';
 
-@EntityRepository()
+@EntityRepository(User)
 export class AuthRepository extends Repository<User> {
     async signup(signupDto: SignupDto) {
         const { username, email, password } = signupDto;
