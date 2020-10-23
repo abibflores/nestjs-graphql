@@ -9,13 +9,13 @@ export class AuthController {
         private readonly _authService: AuthService,
     ){}
     
-    @Post()
+    @Post("/signup")
     @UsePipes(ValidationPipe)
     async signup(@Body() signupDto: SignupDto): Promise<void>{
         return this._authService.signup(signupDto);
     }
 
-    @Post()
+    @Post("/signin")
     @UsePipes(ValidationPipe)
     async signin(@Body() signinDto: SigninDto) {
         return this._authService.signin(signinDto);
