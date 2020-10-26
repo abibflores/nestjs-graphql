@@ -8,9 +8,9 @@ export class TournamentResolver {
     private tournamentService: TournamentService,
   ) {}
 
-  @Query(returns => TournamentModel)
-  async tournament(@Args('id', { type: () => Int }) id: number) {
-    return {id: 1233, name: "Liga"};
+  @Query(returns => [TournamentModel])
+  async tournaments(@Args('id', { type: () => Int }) id: number) {
+    return await this.tournamentService.allTournaments();
   }
 
 }
