@@ -9,7 +9,7 @@ import { OptaService } from '../opta/opta.service';
 import { ConfigService } from 'src/config/config.service';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Tournament]), OptaModule, HttpModule],
+  imports: [TypeOrmModule.forFeature([Tournament]), HttpModule],
   controllers: [TournamentController],
   providers: [TournamentService, TournamentResolver, OptaService, ConfigService]
 })
