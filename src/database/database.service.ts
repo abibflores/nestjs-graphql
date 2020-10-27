@@ -1,4 +1,4 @@
-import { Tournament } from './../modules/tournament/entities/tournament.entity';
+import { Tournament } from '../modules/tournament/tournament.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Configuration } from 'src/config/config.keys';
 import { ConfigModule } from 'src/config/config.module';
